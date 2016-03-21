@@ -1,4 +1,3 @@
-library(plyr)
 library(mclust)
 
 #datに３年分揃っているものを入れる
