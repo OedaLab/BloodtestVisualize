@@ -3,6 +3,7 @@ Blood Test Visualization
 
 Overview
 
+
 - [Preprocessing/double_data.sh][1] - ダブりの血液検査データを表示
 - [Preprocessing/create_data.sh][2] - ダブりのないデータの生成と明らかな異常値データの修正
 - [Preprocessing/year_get.sh][3] - 2008~2014のデータより指定年数連続して存在する受診者のデータのみを取り出し
@@ -13,7 +14,8 @@ Overview
 - [Visualization/pca_gmm.r][6] - クラスタリング、主成分分析を行い受診者変位をpngデータとして出力
 
 
-- [uniqw][1] - unixコマンド uniq -wをmac osで実装したもの
+- [uniqw][7] - unixコマンド uniq -wをmac osで実装したもの
+
 
 [1]: https://github.com/akira1110/BloodtestVisualize/blob/master/Preprocessing/double_data.sh
 [2]: https://github.com/akira1110/BloodtestVisualize/blob/master/Preprocessing/create_data.sh
@@ -21,6 +23,7 @@ Overview
 [4]: https://github.com/akira1110/BloodtestVisualize/blob/master/Preprocessing/pair_plot.r
 [5]: https://github.com/akira1110/BloodtestVisualize/blob/master/Visualization/pca_basic.r
 [6]: https://github.com/akira1110/BloodtestVisualize/blob/master/Visualization/pca_gmm.r
+[7]: https://github.com/akira1110/BloodtestVisualize/blob/master/uniqw.c
 
 
 Attention
