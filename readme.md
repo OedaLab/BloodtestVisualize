@@ -1,23 +1,32 @@
-data_source.csv #元の何もいじられていないデータ
-uniqw           #create_dataで使うuniq -wをc言語で実装したもの
-brew install gsed #必要
+Blood Test Visualization
+====
 
-###sh
-double_data.sh #ダブリ(番号)データを全部出力する.
-create_data.sh #下に余分に追加されているデータを削除する.
-               #明らかに異常なデータがあるので修正(体重532.8kg)
-	       #ダブリを削除する. |sed|awk|uniq -c|grep "  2"で確認 
-year_get.sh    #指定継続年数があるデータの番号を抽出 [引数1]
-	       #全ての年度から指定データ数のみ取り出せる > .data.csv
-	       #トレーニング(n-1)テスト(1)に分解する .taraining.csv .test.csv
+Overview
 
-###r
-pair_plot.r  #pair_plotをするためのスクリプト [data2を作るために実行必須]
-pca_gmm.r #保健指導効果のアニメーションによる可視化(GMM有り)
-pca_basic.r #GMMなしのアニメーション可視化
+- [Preprocessing/double_data.sh][1] - ダブりの血液検査データを表示
+- [Preprocessing/create_data.sh][1] - ダブりのないデータの生成と明らかな異常値データの修正
+- [Preprocessing/year_get.sh][1] - 2008~2014のデータより指定年数連続して存在する受診者のデータのみを取り出し
+- [Preprocessing/pair_plot.r][1] - データセットの作成
 
-###なんかおかしいところ
-下から15行目まで番号がない.あとheaderがもうひとつある.
-13733 体重532.8kg
-38888 体重164.61kg(近年のデータと比べて異常)
-番号と年度でダブっているデータが51件ある.
+
+- [Visualization/pca_basic.r][1] - 主成分分析を行い受診者変位をpngデータとして出力
+- [Visualization/pca_gmm.r][1] - クラスタリング、主成分分析を行い受診者変位をpngデータとして出力
+
+
+- [uniqw][1] - unixコマンド uniq -wをmac osで実装したもの
+
+[1]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+[1]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+[1]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+[1]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+[1]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+[1]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+
+
+Attention
+
+
+- 下から15行目まで番号がない.あとheaderがもうひとつある
+- 13733 体重532.8kg
+- 38888 体重164.61kg(近年のデータと比べて異常)
+- 番号と年度でダブっているデータが51件ある
