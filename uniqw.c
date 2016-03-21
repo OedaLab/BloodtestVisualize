@@ -22,7 +22,7 @@ int main(int argc,char *argv[])
   
   if( argc != 3 ){
     printf("正しく引数が入力されていません.\n");
-    printf("uniqw file numの指定が必要.\n");
+    printf("uniqw [file] [num]の指定が必要.\n");
     exit(1);
   }
   er=open(argv[1]);
